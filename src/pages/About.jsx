@@ -1,4 +1,6 @@
 import React from 'react';
+import ambaImg from '../assets/amba.jpg';
+import koenigseggImg from '../assets/koeningsegg.jpg';
 
 const About = () => {
   return (
@@ -36,7 +38,7 @@ const About = () => {
                   <div className="flex items-center gap-2 sm:gap-x-4">
                     <div className="flex items-center gap-x-2">
                       <img
-                        src="src/assets/amba.jpg"
+                        src={ambaImg}
                         alt="User testimonial"
                         className="h-12 w-12 rounded-full object-cover"
                       />
@@ -80,7 +82,7 @@ const About = () => {
                 <div className="flex items-center gap-2 sm:gap-x-4">
                   <div className="flex items-center gap-x-2">
                     <img
-                      src="src/assets/amba.jpg"
+                      src={ambaImg}
                       alt="User testimonial"
                       className="h-12 w-12 rounded-full object-cover"
                     />
@@ -119,7 +121,7 @@ const About = () => {
           <div className="w-full rounded-md bg-gray-100 max-[991px]:h-[475px] lg:w-2/5">
             <img
               className="w-full mx-auto"
-              src="src/assets/koeningsegg.jpg"
+              src={koenigseggImg}
               alt="Cards"
             />
           </div>

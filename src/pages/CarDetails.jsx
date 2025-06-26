@@ -1,14 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import car1Img from '../assets/car1.jpg';
+import ferrariImg from '../assets/ferrari_image.jpg';
+import bmwImg from '../assets/bmw_image.jpg';
+import defaultImg from '../assets/default_image.jpg';
 
 function CarDetails() {
   const { carName } = useParams(); // Mengambil parameter dari URL
   
   // Data mobil yang bisa Anda sesuaikan atau ambil dari API/Database
   const cars = [
-    { name: '2022 Porsche GT3 RS', description: 'Deskripsi tentang Porsche', image: 'src/assets/car1.jpg', price: 16000000000 },
-    { name: 'ferrari', description: 'Deskripsi tentang Ferrari', image: '/src/assets/ferrari_image.jpg', price: 17000000000 },
-    { name: 'bmw', description: 'Deskripsi tentang BMW', image: '/src/assets/bmw_image.jpg', price: 2200000000 },
+    { name: '2022 Porsche GT3 RS', description: 'Deskripsi tentang Porsche', image: car1Img, price: 16000000000 },
+    { name: 'ferrari', description: 'Deskripsi tentang Ferrari', image: ferrariImg, price: 17000000000 },
+    { name: 'bmw', description: 'Deskripsi tentang BMW', image: bmwImg, price: 2200000000 },
   ];
 
   // Mencari mobil berdasarkan nama yang ada di URL
@@ -74,7 +78,7 @@ function CarDetails() {
           <img
             alt={car ? car.name : 'Mobil Tidak Ditemukan'}
             className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-            src={car ? car.image : '/src/assets/default_image.jpg'}
+            src={car ? car.image : defaultImg}
           />
         </div>
       </div>

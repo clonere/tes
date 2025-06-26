@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo4.jpg';
 
 function Navbar() {
   return (
     <nav className="bg-white-900 text-black p-4">
       <div className="container mx-auto flex items-center">
-        <img className="w-10 h-10 mr-4" src="src/assets/logo4.jpg" alt="Logo" />
+        <img className="w-10 h-10 mr-4" src={logo} alt="Logo" />
         <h1 className="text-2xl font-bold">DreamCars</h1>
         <ul className="flex space-x-6 ml-auto">
           <li className="hover:text-blue-500 cursor-pointer">

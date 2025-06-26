@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo4.jpg';
 
 const DashboardPage = () => {
     const [items, setItems] = useState([]);
@@ -131,7 +132,7 @@ const DashboardPage = () => {
                     <div>
                         <img
                             className="w-full mx-auto"
-                            src="src/assets/logo4.jpg"
+                            src={logo}
                             alt="Logo"
                         />
                         <div className="w-full max-w-md mx-auto xl:max-w-xl">

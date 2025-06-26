@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/logo4.jpg';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -128,7 +129,7 @@ const LoginPage = () => {
                     <div>
                         <img
                             className="w-full mx-auto"
-                            src="src/assets/logo4.jpg"
+                            src={logo}
                             alt="Logo"
                         />
                         <div className="w-full max-w-md mx-auto xl:max-w-xl">
