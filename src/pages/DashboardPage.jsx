@@ -15,7 +15,7 @@ const DashboardPage = () => {
 
         const fetchItems = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/dashboard', {
+                const response = await fetch('https://tes-production-1444.up.railway.app/api/dashboard', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ const DashboardPage = () => {
     const handleAddItem = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://localhost:3001/api/items', {
+            const response = await fetch('https://tes-production-1444.up.railway.app/api/items', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const DashboardPage = () => {
     const handleDeleteItem = async (id) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://localhost:3001/api/items/${id}`, {
+            const response = await fetch(`https://tes-production-1444.up.railway.app/api/items/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

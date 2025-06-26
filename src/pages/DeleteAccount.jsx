@@ -5,7 +5,7 @@ const DeleteAccount = () => {
 
     useEffect(() => {
         // Mengambil data pengguna dari server saat komponen dimuat
-        fetch('http://localhost:3001/api/users')
+        fetch('https://tes-production-1444.up.railway.app/api/users')
             .then(response => response.json())
             .then(data => setUsers(data))
             .catch(error => console.error('Error fetching users:', error));
@@ -19,7 +19,7 @@ const DeleteAccount = () => {
             return;
         }
 
-        fetch(`http://localhost:3001/api/users/${userId}`, {
+        fetch(`https://tes-production-1444.up.railway.app/api/users/${userId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

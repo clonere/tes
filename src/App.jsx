@@ -13,7 +13,7 @@ import DeleteAccount from './pages/DeleteAccount';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/phpunit">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

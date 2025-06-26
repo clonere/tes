@@ -20,7 +20,7 @@ const CreateAccount = () => {
     
         // Kirim data ke backend untuk membuat akun
         try {
-            const response = await fetch('http://localhost:3001/api/createaccount', {
+            const response = await fetch('https://tes-production-1444.up.railway.app/api/createaccount', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
