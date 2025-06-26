@@ -12,7 +12,7 @@ function CarCard({ car }) {
       <h2 className="text-xl font-bold mt-4">{car.name}</h2>
       <p className="text-gray-600">Harga: Rp{car.price.toLocaleString()}</p>
       {/* Menggunakan Link dinamis */}
-      <Link to={`/details/${car.name.toLowerCase().replace(" ", "-")}`}>
+      <Link to={`/details/${car.name.toLowerCase().replace(/ /g, "-")}`}>
         <button className="bg-blue-600 text-white px-4 py-2 mt-4 rounded-lg hover:bg-blue-700">
           Lihat Detail
         </button>
