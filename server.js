@@ -23,10 +23,17 @@ const dataFilePath = path.join(__dirname, 'data', 'users.json');
 // Fungsi untuk membaca data dari file JSON
 const readData = () => {
     try {
+        // Pastikan direktori 'data' ada
+        const dataDir = path.join(__dirname, 'data');
+        if (!fs.existsSync(dataDir)) {
+            fs.mkdirSync(dataDir);
+        }
+        // Baca file
         const data = fs.readFileSync(dataFilePath, 'utf-8');
         return JSON.parse(data);
     } catch (error) {
-        return []; // Jika file tidak ada atau kosong, kembalikan array kosong
+        // Jika file tidak ada atau kosong, kembalikan array kosong
+        return []; 
     }
 };
 
@@ -146,6 +153,6 @@ app.post('/api/login', async (req, res) => {
 });
 
 // Menjalankan server
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log(`Server berjalan di http://localhost:${PORT}`);
 });
