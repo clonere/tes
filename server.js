@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url'; // Untuk mendapatkan __dirname dalam ES Mod
 import { dirname } from 'path'; // Untuk mengelola path dengan benar
 
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 3001; 
 app.use(cors());
 
 // Menangani __dirname dalam ES Modules
@@ -147,5 +147,5 @@ app.post('/api/login', async (req, res) => {
 
 // Menjalankan server
 app.listen(port, () => {
-    console.log(`Server berjalan di http://localhost:${port}`);
+    console.log(`Server berjalan di http://localhost:${PORT}`);
 });
